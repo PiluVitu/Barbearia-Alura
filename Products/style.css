@@ -1,0 +1,143 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #cccccc;
+
+  padding: 5rem 12rem;
+}
+header img {
+  width: 9rem;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+
+  align-items: center;
+  gap: 1.5rem;
+}
+header nav li {
+  list-style: none;
+}
+header nav li a {
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+
+  transition: color 0.3s;
+}
+header nav li a:hover {
+  color: rgb(216, 172, 115);
+}
+
+main {
+  padding: 3rem 6rem;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  border-radius: 1rem;
+}
+main .product {
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  width: 28rem;
+  height: 43rem;
+  padding: 2rem;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: padding 0.4s, width 0.4s, height 0.4s;
+}
+main .product:hover {
+  padding: 2.5rem;
+  width: 35rem;
+  height: 45rem;
+  border: 2px solid rgb(216, 172, 115);
+}
+
+main .product h3 {
+  font-size: x-large;
+  font-weight: 700;
+}
+main .product img {
+  margin-block: 2rem;
+}
+main .product section {
+  text-align: center;
+}
+main .product section p {
+  width: 22.1rem;
+}
+main .product section p + p {
+  margin-top: 1rem;
+}
+main .product section p:nth-child(2) {
+  font-weight: 700;
+  font-size: large;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+
+  padding: 3rem 0;
+
+  color: white;
+
+  background: url(./assets/imagens/bg.jpg);
+}
+footer img {
+  height: 15rem;
+}
+
+@media (max-width: 800px) {
+  header nav ul li a {
+    font-size: 1.4rem;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main .product:hover {
+    padding: 2.5rem;
+    width: 30rem;
+    height: 45rem;
+    border: 2px solid rgb(216, 172, 115);
+  }
+}
